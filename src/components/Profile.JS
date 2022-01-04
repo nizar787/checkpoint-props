@@ -1,15 +1,14 @@
 import React from 'react'
 
-const Profile = ({profile,addition}) => {
-  console.log(profile);
-    return (
-        <div className='profile'>
-          <img src={profile.img} alt={profile.name} />
-          <h1> profile name: {profile.name}</h1>
-          <p>price:{profile.price}</p>
-          <button onClick={()=> addition(profile.name)}>click</button>
-        </div>
-    )
+function Profile({profile,addition}) {
+  return (
+    <div className='profiles'>
+      <img src={profile.Image} alt={profile.fullname} />
+          <h1> profile name: {profile.fullname}</h1>
+          <p>bio:{profile.bio}</p>
+          <button onClick={()=>addition(profile.fullname)} >click</button>
+    </div>
+  )
 }
 
 export default Profile
